@@ -5,5 +5,5 @@ from api.models import TaskList
 class TaskListSerializer(serializers.ModelSerializer):
     class Meta:
         model=TaskList
-        fields=['id','task']
+        fields=['id','task','user']
 
