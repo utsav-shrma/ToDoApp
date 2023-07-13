@@ -1,4 +1,3 @@
-
 from djoser.serializers import UserCreateSerializer as BaseUserSerializer
 from djoser.serializers import UserSerializer as BaseCurrentUserSerializer
 
