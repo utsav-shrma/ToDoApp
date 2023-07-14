@@ -128,6 +128,7 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+# for dev purposes only
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
@@ -138,8 +139,10 @@ DATABASES = {
     }
 }
 
+# Overiding default user model
 AUTH_USER_MODEL = 'user.User'
 
+# defining auth engine as JWT for django
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework_simplejwt.authentication.JWTAuthentication',
@@ -147,11 +150,14 @@ REST_FRAMEWORK = {
     ),
 }
 
+# defining headers and lifetime period for access and refresh tokens
 SIMPLE_JWT = {
    'AUTH_HEADER_TYPES': ('JWT',),
    "ACCESS_TOKEN_LIFETIME": timedelta(days=1),
    "REFRESH_TOKEN_LIFETIME": timedelta(days=2),
 }
+
+#defining custom serializer for djoser for handling user info
 DJOSER = {
     
     'SERIALIZERS': {

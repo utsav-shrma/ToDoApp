@@ -5,7 +5,8 @@ from .models import User
 # Register your models here.
 @admin.register(User)
 class UserAdmin(BaseUserAdmin):
-    # list_display=['first_name','last_name','email']
+    
+    # Added support for mannaging user fields for django admin  
     add_fieldsets = (
         (
             None,

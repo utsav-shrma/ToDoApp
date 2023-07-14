@@ -1,6 +1,7 @@
 from django.contrib import admin
-
-# Register your models here.
 from api.models import TaskList
 
-admin.site.register(TaskList)
+#registering task list for admin panel
+@admin.register(TaskList)
+class TaskListAdmin(admin.ModelAdmin):
+    list_display=('task','user')
