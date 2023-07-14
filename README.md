@@ -17,20 +17,18 @@ A Django based basic backend for a basic to do app
      for updating/ deleting the task
      (Note : Admin can change user/task for all user but regular user can change task associated with him only)
 
-# 3. /jwt/create/
-    for creating user
+# 3. /auth/users/
+    creates and lists all users to admin
 
-# 4. /auth/jwt/verify/
-    for getting JWT access and refresh token
+# 4. /auth/users/me/
+    for getting/updating details of current user
+
+# 5. /jwt/create/
+    for JWT getting access and refresh token
     
-# 5. /auth/jwt/refresh/
+# 6. /auth/jwt/refresh/
     for getting new access token
 
-# 6. /auth/users/
-    lists all users to admin
-    
-# 7. /auth/me/
-    for getting and updating details of current user
 
 
 Note: Authentication/user endpoints are implemented using djoser
