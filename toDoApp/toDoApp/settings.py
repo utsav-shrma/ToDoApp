@@ -76,17 +76,6 @@ TEMPLATES = [
 WSGI_APPLICATION = 'toDoApp.wsgi.application'
 
 
-# Database
-# https://docs.djangoproject.com/en/4.2/ref/settings/#databases
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
-
-
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
 
@@ -135,7 +124,7 @@ DATABASES = {
         'NAME': 'toDoApp',
         'HOST': 'localhost',
         'USER': 'root',
-        'PASSWORD': 'Mysql@pass123'
+        'PASSWORD': 'LOCAL_HOST_PASSWORD'
     }
 }
 
